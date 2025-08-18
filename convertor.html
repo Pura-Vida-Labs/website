@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pura Vida Lab Banner - JPG Download</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #1a1a1a;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        h1 {
+            color: #00ffff;
+            margin-bottom: 20px;
+        }
+        
+        #bannerContainer {
+            background: white;
+            padding: 0;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        
+        button {
+            background: linear-gradient(45deg, #00ffff, #ff00ff);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 18px;
+            border-radius: 50px;
+            cursor: pointer;
+            margin: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+        }
+        
+        .size-buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .info {
+            text-align: center;
+            color: #999;
+            margin-top: 20px;
+        }
+        
+        canvas {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pura Vida Lab Banner - Download as JPG</h1>
+    
+    <div id="bannerContainer">
+        <svg id="banner" width="800" height="200" viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="neonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#ff00ff;stop-opacity:1" />
+              <stop offset="25%" style="stop-color:#00ffff;stop-opacity:1" />
+              <stop offset="50%" style="stop-color:#ffff00;stop-opacity:1" />
+              <stop offset="75%" style="stop-color:#00ff00;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#ff00ff;stop-opacity:1" />
+            </linearGradient>
+            <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#1a0033;stop-opacity:1" />
+              <stop offset="50%" style="stop-color:#330066;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#1a0033;stop-opacity:1" />
+            </linearGradient>
+            <filter id="glow">
+              <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+              <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+            <pattern id="pixels" x="0" y="0" width="4" height="4" patternUnits="userSpaceOnUse">
+              <rect x="0" y="0" width="3" height="3" fill="#000" opacity="0.1"/>
+            </pattern>
+            <pattern id="scanlines" x="0" y="0" width="100%" height="4" patternUnits="userSpaceOnUse">
+              <line x1="0" y1="0" x2="800" y2="0" stroke="#000" stroke-width="1" opacity="0.2"/>
+              <line x1="0" y1="2" x2="800" y2="2" stroke="#fff" stroke-width="1" opacity="0.1"/>
+            </pattern>
+          </defs>
+          <rect width="800" height="200" fill="url(#bgGradient)"/>
+          <g opacity="0.3">
+            <line x1="0" y1="50" x2="800" y2="50" stroke="#00ffff" stroke-width="1"/>
+            <line x1="0" y1="100" x2="800" y2="100" stroke="#00ffff" stroke-width="1"/>
+            <line x1="0" y1="150" x2="800" y2="150" stroke="#00ffff" stroke-width="1"/>
+            <line x1="200" y1="0" x2="200" y2="200" stroke="#00ffff" stroke-width="1"/>
+            <line x1="400" y1="0" x2="400" y2="200" stroke="#00ffff" stroke-width="1"/>
+            <line x1="600" y1="0" x2="600" y2="200" stroke="#00ffff" stroke-width="1"/>
+          </g>
+          <g opacity="0.6">
+            <circle cx="50" cy="30" r="1" fill="#fff"/>
+            <circle cx="150" cy="170" r="1.5" fill="#00ffff"/>
+            <circle cx="250" cy="40" r="1" fill="#ff00ff"/>
+            <circle cx="350" cy="160" r="1.5" fill="#ffff00"/>
+            <circle cx="450" cy="35" r="1" fill="#fff"/>
+            <circle cx="550" cy="165" r="1" fill="#00ff00"/>
+            <circle cx="650" cy="45" r="1.5" fill="#00ffff"/>
+            <circle cx="750" cy="155" r="1" fill="#ff00ff"/>
+          </g>
+          <g transform="translate(400, 100)">
+            <text x="4" y="4" font-family="Courier New, monospace" font-size="48" font-weight="bold" text-anchor="middle" fill="#000" opacity="0.5">
+              PURA VIDA LAB
+            </text>
+            <text x="3" y="3" font-family="Courier New, monospace" font-size="48" font-weight="bold" text-anchor="middle" fill="#330066">
+              PURA VIDA LAB
+            </text>
+            <text x="2" y="2" font-family="Courier New, monospace" font-size="48" font-weight="bold" text-anchor="middle" fill="#660099">
+              PURA VIDA LAB
+            </text>
+            <text x="0" y="0" font-family="Courier New, monospace" font-size="48" font-weight="bold" text-anchor="middle" fill="#fff" stroke="url(#neonGradient)" stroke-width="2" filter="url(#glow)">
+              PURA VIDA LAB
+            </text>
+            <text x="0" y="0" font-family="Courier New, monospace" font-size="48" font-weight="bold" text-anchor="middle" fill="none" stroke="#00ffff" stroke-width="1" opacity="0.8">
+              PURA VIDA LAB
+            </text>
+          </g>
+          <g transform="translate(50, 100)">
+            <polygon points="0,0 20,-10 20,10" fill="#00ffff" opacity="0.8"/>
+            <polygon points="30,0 50,-10 50,10" fill="#ff00ff" opacity="0.8"/>
+          </g>
+          <g transform="translate(750, 100)">
+            <polygon points="0,0 -20,-10 -20,10" fill="#ffff00" opacity="0.8"/>
+            <polygon points="-30,0 -50,-10 -50,10" fill="#00ff00" opacity="0.8"/>
+          </g>
+          <rect width="800" height="200" fill="url(#pixels)" opacity="0.3"/>
+          <rect width="800" height="200" fill="url(#scanlines)" opacity="0.4"/>
+          <g stroke="#00ffff" stroke-width="2" fill="none" opacity="0.6">
+            <polyline points="10,30 10,10 30,10"/>
+            <polyline points="770,10 790,10 790,30"/>
+            <polyline points="10,170 10,190 30,190"/>
+            <polyline points="770,190 790,190 790,170"/>
+          </g>
+          <text x="400" y="140" font-family="Courier New, monospace" font-size="14" text-anchor="middle" fill="#00ffff" opacity="0.8">
+            [ UNITY ASSET PUBLISHER ]
+          </text>
+          <g transform="translate(700, 170)">
+            <rect x="0" y="0" width="80" height="20" fill="#000" opacity="0.5" rx="2"/>
+            <text x="40" y="14" font-family="Courier New, monospace" font-size="10" text-anchor="middle" fill="#00ff00">
+              EST. 2024
+            </text>
+          </g>
+        </svg>
+    </div>
+    
+    <div class="size-buttons">
+        <button onclick="downloadJPG(1)">Download Original (800x200)</button>
+        <button onclick="downloadJPG(2)">Download 2x (1600x400)</button>
+        <button onclick="downloadJPG(4)">Download 4x (3200x800)</button>
+    </div>
+    
+    <button onclick="downloadPNG(2)">Download as PNG (Transparent)</button>
+    
+    <div class="info">
+        <p>Choose your preferred size and click to download</p>
+        <p>PNG version preserves transparency and quality better than JPG</p>
+    </div>
+    
+    <canvas id="canvas"></canvas>
+    
+    <script>
+        function downloadJPG(scale = 1) {
+            const svg = document.getElementById('banner');
+            const canvas = document.getElementById('canvas');
+            const ctx = canvas.getContext('2d');
+            
+            // Set canvas size
+            const width = 800 * scale;
+            const height = 200 * scale;
+            canvas.width = width;
+            canvas.height = height;
+            
+            // Get SVG data
+            const svgData = new XMLSerializer().serializeToString(svg);
+            const svgBlob = new Blob([svgData], { type: 'image/svg+xml;charset=utf-8' });
+            const url = URL.createObjectURL(svgBlob);
+            
+            // Create image
+            const img = new Image();
+            img.onload = function() {
+                // Fill white background for JPG
+                ctx.fillStyle = '#ffffff';
+                ctx.fillRect(0, 0, width, height);
+                
+                // Draw image
+                ctx.drawImage(img, 0, 0, width, height);
+                
+                // Convert to JPG and download
+                canvas.toBlob(function(blob) {
+                    const link = document.createElement('a');
+                    link.download = `pura-vida-lab-banner-${width}x${height}.jpg`;
+                    link.href = URL.createObjectURL(blob);
+                    link.click();
+                    URL.revokeObjectURL(link.href);
+                }, 'image/jpeg', 0.95);
+                
+                URL.revokeObjectURL(url);
+            };
+            
+            img.src = url;
+        }
+        
+        function downloadPNG(scale = 1) {
+            const svg = document.getElementById('banner');
+            const canvas = document.getElementById('canvas');
+            const ctx = canvas.getContext('2d');
+            
+            // Set canvas size
+            const width = 800 * scale;
+            const height = 200 * scale;
+            canvas.width = width;
+            canvas.height = height;
+            
+            // Get SVG data
+            const svgData = new XMLSerializer().serializeToString(svg);
+            const svgBlob = new Blob([svgData], { type: 'image/svg+xml;charset=utf-8' });
+            const url = URL.createObjectURL(svgBlob);
+            
+            // Create image
+            const img = new Image();
+            img.onload = function() {
+                // Clear canvas (transparent background)
+                ctx.clearRect(0, 0, width, height);
+                
+                // Draw image
+                ctx.drawImage(img, 0, 0, width, height);
+                
+                // Convert to PNG and download
+                canvas.toBlob(function(blob) {
+                    const link = document.createElement('a');
+                    link.download = `pura-vida-lab-banner-${width}x${height}.png`;
+                    link.href = URL.createObjectURL(blob);
+                    link.click();
+                    URL.revokeObjectURL(link.href);
+                }, 'image/png');
+                
+                URL.revokeObjectURL(url);
+            };
+            
+            img.src = url;
+        }
+    </script>
+</body>
+</html>
